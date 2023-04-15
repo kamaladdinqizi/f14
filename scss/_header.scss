@@ -1,0 +1,150 @@
+.header {
+  height: 100dvh;
+
+  background: {
+    image: url('../img/Background.png');
+    repeat: no-reoeat;
+    size: cover;
+    position: center;
+  } 
+
+  &-content{
+    margin: 100px auto 52px auto;
+    max-width: 800px;
+    &__text {
+      font-weight: 500px;
+      font-size: 15px;
+      color: map-get($gray ,'gray-100' );
+      text-align: center;
+    }
+    &__title{
+      margin: 34px 0;
+      font-weight: 600;
+      font-size: 120px;
+      line-height: 100%;
+      color: white;
+      span{
+        display: flex;
+        align-items: center;
+        &:nth-child(2){
+          justify-content: flex-end;
+        }
+      }
+    }
+    &__subtitle{
+      font-weight: 400;
+      font-style: 24px;
+      color: map-get($gray ,'gray-100' );
+      text-align:center;
+    }
+  }
+  &-form{
+    max-width: 640px;
+    background-color: white;
+    margin: 0 auto;
+    display: flex;
+    padding: 27px 32px;
+    border-radius: 16px;
+    gap: 16px;
+    &__search{
+      width: 100%;
+      border:none;
+      outline: none;
+      font-size: 16px;
+      border-right: 1px solid map-get($gray ,'gray-100' )
+    }
+    &__select{
+      width: 160px;
+      border:none;
+      outline: none;
+      font-style: 16px;
+    }
+    &__btn{
+      font-style: 24px;
+      background-color: transparent;
+      border: none;
+      outline: none;
+      color: map-get($primary, 'dark-100' );
+    }
+  }
+  &-logos{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    gap:110px;
+  }
+  &-nftes{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    img{
+      position: absolute;
+    }
+    .nft-1{
+      top: 30%;
+      left: 10%;
+    }
+    .nft-2{
+      top: 60%;
+
+    }
+    .nft-3{
+      top: 70%;
+      left: 20%;
+    }
+    .nft-4{
+      top: 30%;
+      right: 10%;
+    }
+    .nft-5{
+      top: 60%;
+      right: 0;
+    }
+    .nft-6{
+      top: 70%;
+      right: 20%;
+    }
+  }
+
+
+  
+  ;
+}
+
+.navbar {
+  display: flex;
+  padding: 2.6rem 3rem;
+  justify-content: space-between;
+  align-items: center;
+  &-wrapper{
+    flex-grow: 1;
+  }
+  &-collapse{
+    flex-grow: 2;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  &-menu {
+    display:flex;
+    gap:4rem;
+    color:map-get($gray, "gray-100");
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    &__link{
+      font-weight: 600;
+      transition: 0.25s;
+      &:hover{
+        color:map-get($gray,  "gray-10" );
+      }
+    }
+  }
+  &-actions{
+    display: flex;
+    gap: 1rem;
+  }
+}

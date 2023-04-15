@@ -1,0 +1,39 @@
+.btn{
+  background: none;
+  border: none;
+  color: white;
+  padding: 1rem 1.5rem;
+  font-size: 1rem ;
+  font-weight: 600 ;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.btn-outline{
+  color: map-get($gray , "gray-100" );
+  border: 2px solid map-get($gray , "gray-100" );
+  transition: 0.25s;
+  &:hover{
+    background-color: rgba(map-get($gray , "gray-100"), 0.3);
+  }
+}
+.btn-primary{
+  position: relative; //kattasina
+  z-index: 1;
+  transition: 0.25s;
+  &::before{
+    position: absolute; //ichindagi kichika
+    content: '';
+    width: 100%;
+    height: 108%;
+    top: -4%;
+    left: 0;
+    background-image: linear-gradient(100deg, #4745d0, #2a27c9);
+    box-shadow: inset -4px -4px 4px rgba(#0000, 0.1),
+    inset 4px 4px 4px rgba(#fff, 0.1);
+    border-radius: 10px;
+    z-index: -1;
+  }
+  &:hover{
+    filter: brightness(120%); // rangini ochaytirish u-n
+  }
+}
